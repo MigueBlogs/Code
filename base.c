@@ -16,11 +16,11 @@ void Captura(); //Captura desde teclado y permite usar archivos
 
 void Busca(); //Busca registro
 
-void Lista(struct Alumno *lista); //Muestra Lista
+void Lista(); //Muestra Lista
 
 void Borra(); //Borra registro
 
-int main{
+int main (){
 	do
 	{
 	opc=0;
@@ -28,7 +28,7 @@ int main{
 	printf("Elija una opci%cn\n",162);
 	printf("1. Capturar registro\n");
 	printf("2. Buscar registro\n");
-	printf("3. Mostrar Registro")
+	printf("3. Mostrar Registro");
 	printf("4. Eliminar registro\n");
 	scanf("%d",&opc);
 	switch(opc)
@@ -41,12 +41,13 @@ int main{
 		break;
 		case 3:
 		Lista();
-		case 4;
+		case 4:
 		Borra();
 		break;
 		default:
 		printf("Opción incorrecta\n");
-		printf("Desea intentar de nuevo? <Y/N>")
+		printf("Desea intentar de nuevo? <Y/N>");
+        fflush(stdin);
 		scanf("%c",&r);
 	}
 	}
@@ -54,40 +55,40 @@ int main{
 	return 0;
 }
 
-void Archivos(int tipo){
-	FILE *arch;
-	int tipo; //Variable para definir el si guarda o escribe
-	printf("Verificando...\n\n");
-	if(tipo == 1)
-	{
-		if(!(arch=fopen("base.txt","r")))
-			printf("ERROR: Archivo no encontrado");
-		while(!feof(arch))
-		{
-			fprintf("%s\t%s\t%d",temp.Nocta,temp.Nom,temp.edad);
-			printf("Datos cargados correctamente");
+//void Archivos(int tipo){
+//	FILE *arch;
+//	int tipo; //Variable para definir el si guarda o escribe
+//   printf("Verificando...\n\n");
+//	if(tipo == 1)
+//	{
+//		if(!(arch=fopen("base.txt","r")))
+//			printf("ERROR: Archivo no encontrado");
+//		while(!feof(arch))
+//		{
+//			fprintf("%s\t%s\t%d",temp.Nocta,temp.Nom,temp.edad);
+//			printf("Datos cargados correctamente");
+//
+//		}
+//	else if (tipo == 2)
+//		if(!(arch=fopen("base.txt","rw")))
+//			printf("ERROR: Archivo no encontrado");
+//		else
+//		{
+//			printf("Datos exportados correctamente");
+//		}
+//	fclose(arch);
+//	}
+//
+//}
 
-		}
-	else if (tipo == 2)
-		if(!(arch=fopen("base.txt","rw")))
-			printf("ERROR: Archivo no encontrado");
-		else
-		{
-			printf("Datos exportados correctamente");
-		}
-	fclose(arch);
-	}
-
-}
-
-void Captura(){
+void Captura(struct Alumno *temp){
 	opc=0;
-	struct Alumno *temp;
+//	struct Alumno *temp;
 	printf("Elija una opci%cn:\n",162);
 	printf("1.Nuevo Registro\n");
 	printf("2.Nuevo(s) desde archivo\n");
 	printf("3.Exportar base");
-	scanf("%d",&opt);
+	scanf("%d",&opc);
 	switch(opc)
 	{
 		case 1:
@@ -119,14 +120,14 @@ void Busca(){
 	printf("Elija criterio a buscar:\n");
 	printf("1.No. cta.\n");
 	printf("2.Nombre\n");
-	scanf("%d",&criterio);
+	scanf("%d", &opc);
 	switch(opc)
 	{
 		case 1:
 		break;
 		case 2:
 		break;
-		default
+		default:
 		printf("Opci%cn incorrecta");
 	}
 
