@@ -1,11 +1,13 @@
-///////# Fibonaci & Factorial en código Phyton
-c=0
-f=[0,1,2,3,4,5,6,7,8,9]
-def fibo(f):
-    for i in range (10):
-    if(f[i]<10):
-        print f[i]
-    else:
-        c=(fibo(f[i]-1)+fibo(f[i]-2))
-        print c
-        
+# Fibonaci código Phyton
+rango=10
+n1=0
+n2=1
+i=1
+print n1
+print n2
+while i <= rango:
+  r=n1+n2
+  print r
+  n1=n2
+  n2=r
+  i=i+1
