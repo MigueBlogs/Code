@@ -1,6 +1,6 @@
 ///////# Fibonaci & Factorial en código Phyton
-def n=10
-f[10];
-for (i=1;i<n;i++)
-    f[i]=f[i-1]+f[i-2+]:
-    print(f[i])
+f=[0,1,2,3,4,5,6,7,8,9]
+for i in range(9):
+    temp=f[i]
+    f[i]=temp+f[i+1]
+    print f[i],","
