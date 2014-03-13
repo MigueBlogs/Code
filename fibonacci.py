@@ -1,4 +1,5 @@
 # Fibonaci código Phyton
+print "Vamos a calcular Fibonnacci con el umero 10"
 rango=10
 n1=0
 n2=1
